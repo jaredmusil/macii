@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jared Musil">
+	<meta name="description" content="A web based Mac II">
+	<title>Jared Musil</title>
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	html {
+		font-family: 'Print Char 21', 'Isaac Espy Sans System','Press Start 2P', monospace;
+	}
+	#case {
+		border: 3px solid #000;
+		border-radius: 10px;
+		padding: 46px;
+		width: 600px;
+		height: 750px;
+		margin: 0 auto;
+		box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
+	}
+	#screen {
+		box-sizing: content-box;
+		width: 600px;
+		height: 480px;
+		margin: 0 auto;
+		border: 3px solid #000;
+		border-radius: 10px;
+	}
+	#floppy {
+		margin: 100px 0 0 200px;
+		border: 3px solid #000;
+		border-radius: 10px;
+		height: 10px;
+		width: 400px;
+		
+		box-shadow: inset 0 0 7px rgba(0,0,0,0.55)
+	}
+	nav {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADQ0lEQVQ4T21Ta1BMYRh+9lIbXWlz2bIxQxpN2w93bblLbhs1hXVpy0zURqMxMe6DYcdkot3IqE2EbWq0SMO4dHPXj5ZMygytWqGQit3aPcfbIjG+M+/Md57ve5/3ec95Xg7+s2amhmoYqy2OAePEsgCHA3DBNXP5vNyK9MqkgSl09GeF7wpd8N1ivaEIWYbFQcHwdB8CMDbK5qG94zNKa+9BW3UFgwT8sLKDlTf7MvsJluwJlfO4/PMZ8u3odjCh7J0Oxq5XyAjSI6VWBrHLWISPjIFzrwgpBUdgY61h1/ZX3uwnWLQvmNWs249RHiJcbFLD0PGA+FmoAoqQVhdlryVxn45Vvkq8/WJCUv5eXN93r687YIUqVBMzMSJR4i+C4dMDRHmnoLhZjZqOOzhEBDuJYKL7HET6KFHUkgHJ0Okw1JugqynJshNEHg0xn1mnFlx6p0LrdyMkrlLIRJtQ2HwMy70TcbklC9E+W6E3nYShsxojBomxcmQaNuQrLXaC6IxgVpdQjAOGaPDAh5W1YoLrNCwcHgcGNsJ4KHufixedD8Hn8AmxYrekEDHZkT8/olwTzJ5XFIPpZQngUec29DAW9LJmvOl+jtHOgXDgCODIFfSfcx04WKP9RRB7Wspq119Fev1q+t9UgRSMc5mM+UIFKWCIzIyqT4Vo7HoCHodHiBWp/hegOLv0p4L4vBBLekSeY1mbGu3mZkqeirnCOJKdhXnD4nHrQw7ChyfidlsukTyCp5MPwoVKpJbE9tgJ1mum6WKkcdEB4glooCpzhPEo/6hFfXc1EnzPILtpA/ydpZjlpcCdthz4kbo64wvoqnMLf/tAnFwU0rRjdjZGuIpR3paH19+ekg1YKEadgvbtRrufxwyehFnCWLR2GnH4bgIyo6p8+40k2xaYFDBbpN48IxO9/K+o7ShFu8UIuU8WCpoT4SkQI8h9MRysbjhxPxl1d01K/dFnmoGz4CZLC1w7fqaHOswvHlO8F8HFyavPjHbDd5k/4nHLddxoyMHLii9KverZOTr5+tcwEeBGMW5LgTTNeRhXRqodWWLg0EPd9HR/YPTH5dUqutPYl/zXMP0z1WJ696TgDsAZ2rdTGAfe/QHP0T6MYE7izQAAAABJRU5ErkJggg==);
+		background-repeat: no-repeat;
+		background-position: 5px;
+		padding-left: 40px;
+		border-bottom: 1px solid #000;
+		border-radius: 6px 6px 0 0;
+		color: green;
+		text-align: left;
+		height: 20px;
+		padding: 8px 20px 2px 20px;
+  }
+	nav a {
+		font-size: 16px;
+		line-height: 16px;
+		height: 20px;
+		padding: 0px 10px;
+		color: #000;
+		text-decoration: none;
+		display: inline-block;
+  }
+	#content {
+		display: inline-block;
+		background-color: #ddd;
+		width: 600px;
+		height: 443px;
+		border-radius: 0 0 6px 6px;
+	}
+  #content p {
+    padding: 0;
+    margin: 8px 6px;
+  }
+	.window {
+		border: 1px solid #000;
+		width: 400px;
+		height: 200px;
+		position: relative;
+		top: 56px;
+		left: 34px;
+	}
+	.window-title {
+		background-image: url(dragbar.png);
+		background-repeat: repeat-x;
+		background-position-x: 2px;
+		height: 22px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		line-height: 22px;
+	}
+	.window-content {
+		background-color: #fff;
+	}
+	.bg-white {
+		background-color: #fff;
+		padding: 0 2px;
+	}
+	</style>
+</head>
+
+<body>
+  <div id="case">
+		<div id="screen">
+			<!-- Top navbar -->
+			<nav>
+				<a href="#">Apps</a>
+				<a href="#">About</a>
+				<a href="#">More</a>
+			</nav>
+			<!-- Begin page content -->
+			<div id="content">
+				<p>AAA</p>
+				<div class="window">
+					<div class="window-title">
+						<span class="bg-white">Title</span>
+					</div>
+					<div class="window-content">
+					sdfs
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="floppy"></div>
+	</div>
+</body>
+</html>
